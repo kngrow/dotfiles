@@ -35,12 +35,9 @@ export LANG=ja_JP.UTF-8
 		  
 		   
 # nvm 設定
-		   [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-		   nvm use default
-		   npm_dir=${NVM_PATH}_modules
-		   export NODE_PATH=$npm_dir
-		    
-#rbenv 設定
+ export PATH="$HOME/.ndenv/bin:$PATH"
+ eval "$(ndenv init - zsh)"		    
+# rbenv 設定
 			export PATH="$HOME/.rbenv/bin:$PATH"
 			eval "$(rbenv init - zsh)"
 			 
@@ -67,11 +64,8 @@ export LANG=ja_JP.UTF-8
 	alias l='ls -CF'
 # vim:set ft=zsh :
 
-export PATH="$PATH:/home/yusuke/bin/"
-source ~/.nvm/nvm.sh
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export SSL_CERT_FILE="/usr/local/etc/ssl/cacert.pem"
 
+export PATH="$PATH:$HOME/.composer/vendor/bin"
