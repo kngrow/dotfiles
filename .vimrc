@@ -8,6 +8,4 @@ set smartindent
 set ignorecase
 set smartcase
 set wrapscan
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
