@@ -39,6 +39,8 @@ setopt interactive_comments
  zstyle ':vcs_info:*' actionformats '[%b|%a]'
  precmd () { vcs_info }
  RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+ 
+ PROMPT='(￣･ω･￣) < :'
  alias ls='ls --color=auto'
  #alias dir='dir --color=auto'
  #alias vdir='vdir --color=auto'
@@ -51,5 +53,5 @@ setopt interactive_comments
  export SSL_CERT_FILE="/usr/local/etc/ssl/cacert.pem"
 
  export PATH="$PATH:$HOME/.composer/vendor/bin"
-
+ 
 # vim:set ft=zsh :
