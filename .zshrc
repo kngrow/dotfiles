@@ -40,7 +40,7 @@ setopt interactive_comments
  precmd () { vcs_info }
  RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
  
- PROMPT='(￣･ω･￣) < :'
+ PROMPT=' (･∞･) < '
  alias ls='ls --color=auto'
  #alias dir='dir --color=auto'
  #alias vdir='vdir --color=auto'
