@@ -1,7 +1,7 @@
 set number
 set title
 set showmatch
-syntax on
+syntax enable
 set tabstop=4
 set smartindent
 set wildmenu
@@ -10,6 +10,9 @@ set ignorecase
 set smartcase
 set wrapscan
 
+nnoremap j gj
+nnoremap k gk
+set whichwrap=h,l
 
 if &compatible
   set nocompatible               " Be iMproved
@@ -19,7 +22,7 @@ endif
  set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
- call dein#begin('/home/vagrant/.cache/dein')
+ call dein#begin('~/.cache/dein')
 
 " Let dein manage dein
 " Required:
