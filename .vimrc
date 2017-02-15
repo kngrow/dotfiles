@@ -30,6 +30,9 @@ call dein#add('Shougo/dein.vim')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
+ call dein#add('tomtom/tcomment_vim')
+ call dein#add('thinca/vim-scouter')
+ call dein#add('cohama/lexima.vim')
 
 " You can specify revision/branch/tag.
  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -48,4 +51,5 @@ endif
 
 let g:airline_powerline_fonts = 1
 set laststatus=2
-let g:airline_theme = 'molokai'
+
+set background=dark
