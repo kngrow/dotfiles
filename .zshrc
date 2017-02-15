@@ -17,7 +17,7 @@
 # Ctrl+Dでzshを終了しない
  setopt ignore_eof
 # '#' 以降をコメントとして扱う
-setopt interactive_comments
+ setopt interactive_comments
  alias ll='ls -laG'
  alias ls='ls -G' 
 		   
