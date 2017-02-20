@@ -15,6 +15,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <C-p> <ESC>:NERDTree
 set whichwrap=h,l
+set pastetoggle=<F10>
 
 if &compatible
   set nocompatible               " Be iMproved
