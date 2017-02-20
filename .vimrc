@@ -3,7 +3,8 @@ set title
 set showmatch
 syntax enable
 set tabstop=4
-set smartindent
+set shiftwidth=4
+set autoindent
 set wildmenu
 
 set ignorecase
@@ -39,6 +40,7 @@ call dein#add('Shougo/dein.vim')
  call dein#add('cohama/lexima.vim')
  call dein#add('tpope/vim-rails')
  call dein#add('scrooloose/nerdtree')
+ call dein#add('airblade/vim-gitgutter')
 
 " You can specify revision/branch/tag.
  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
