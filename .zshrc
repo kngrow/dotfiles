@@ -2,13 +2,12 @@
   export LANG=ja_JP.UTF-8
  
 # 補完機能を有効にする
-  autoload -Uz compinit
-  compinit
+  autoload -Uz compinit , compinit
   setopt auto_pushd
   setopt pushd_ignore_dups
   HISTFILE=~/.zsh_history
-  HISTSIZE=1000000
-  SAVEHIST=1000000
+  HISTSIZE=10000
+  SAVEHIST=10000
   setopt print_eight_bit
   setopt no_beep
 	  
@@ -18,17 +17,11 @@
  setopt ignore_eof
 # '#' 以降をコメントとして扱う
  setopt interactive_comments
- alias ll='ls -laG'
- alias ls='ls -G' 
-		   
-# nvm 設定
- export PATH="$HOME/.ndenv/bin:$PATH"
- eval "$(ndenv init - zsh)"		    
-# rbenv 設定
- export PATH="$HOME/.rbenv/bin:$PATH"
- eval "$(rbenv init - zsh)"
+#  保管時の大文字小文字区別しない
+ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 			  
-  RPROMPT="%{${reset_color}%}"
+ # 後ろにディレクトリのgit の状態を確認する
+ RPROMPT="%{${reset_color}%}"
    
  autoload -Uz vcs_info
  setopt prompt_subst
@@ -41,17 +34,28 @@
  RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
  
  PROMPT=' (･∞･) < '
- alias ls='ls --color=auto'
+
+#  各種alias
+#  alias ls='ls --color=auto'
+ alias ll='ls -laG'
+ alias ls='ls -G' 
+		   
  #alias dir='dir --color=auto'
  #alias vdir='vdir --color=auto'
  alias grep='grep --color=auto'
  alias fgrep='fgrep --color=auto'
  alias egrep='egrep --color=auto'			    
 
-### Added by the Heroku Toolbelt
+### Heroku Toolbelt の設定
  export PATH="/usr/local/heroku/bin:$PATH"
  export SSL_CERT_FILE="/usr/local/etc/ssl/cacert.pem"
 
  export PATH="$PATH:$HOME/.composer/vendor/bin"
+# nvm 設定
+ export PATH="$HOME/.ndenv/bin:$PATH"
+ eval "$(ndenv init - zsh)"		    
+# rbenv 設定
+ export PATH="$HOME/.rbenv/bin:$PATH"
+ eval "$(rbenv init - zsh)"
  
 # vim:set ft=zsh :
