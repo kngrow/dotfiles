@@ -5,6 +5,7 @@ syntax enable
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set expandtab
 set wildmenu
 
 set ignorecase
@@ -13,7 +14,7 @@ set wrapscan
 
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-p> <ESC>:NERDTree
+nnoremap <C-p><Enter><ESC>:NERDTree
 set whichwrap=h,l
 set pastetoggle=<F10>
 
