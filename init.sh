@@ -6,6 +6,9 @@ mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
  git clone https://github.com/Shougo/dein.vim.git \
     ~/.vim/dein/repos/github.com/Shougo/dein.vim
 
+echo 'install ctag?'
+# apt-get install ctags;
+
 echo 'link .vimrc'
 ln -s ${x}/.vimrc $HOME/.vimrc
 echo 'link .zshrc'
