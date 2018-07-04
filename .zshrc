@@ -37,8 +37,8 @@
 
 #  各種alias
 #  alias ls='ls --color=auto'
- alias ll='ls -laG'
- alias ls='ls -G' 
+ alias ll='ls -laG --color'
+ alias ls='ls -G --color' 
 		   
  #alias dir='dir --color=auto'
  #alias vdir='vdir --color=auto'
@@ -50,12 +50,12 @@
  export PATH="/usr/local/heroku/bin:$PATH"
  export SSL_CERT_FILE="/usr/local/etc/ssl/cacert.pem"
 
- export PATH="$PATH:$HOME/.composer/vendor/bin"
-# nvm 設定
- export PATH="$HOME/.ndenv/bin:$PATH"
- eval "$(ndenv init - zsh)"		    
-# rbenv 設定
- export PATH="$HOME/.rbenv/bin:$PATH"
- eval "$(rbenv init - zsh)"
- 
+ export PATH="$HOME/.composer/vendor/bin:$PATH"
+ export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+# anyenv
+ export PATH="$HOME/.anyenv/bin:$PATH" 
+ eval "$(anyenv init -)"
+
+
+
 # vim:set ft=zsh :

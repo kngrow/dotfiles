@@ -7,3 +7,5 @@ tags
 tmp/
 logs/
 vendor/
+deploy.php
+*.swp
