@@ -33,7 +33,7 @@
  precmd () { vcs_info }
  RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
  
- PROMPT=' (･∞･) < '
+ PROMPT='%~ (･∞･) < '
 
 #  各種alias
 #  alias ls='ls --color=auto'
