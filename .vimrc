@@ -96,7 +96,5 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 let g:airline_powerline_fonts = 1
 let NERDTreeShowHidden=1
 set laststatus=2
-" TODO: このキーマップをきかせる？
-map <C-/> ggc
 
 set background=dark

@@ -9,3 +9,8 @@ logs/
 vendor/
 deploy.php
 *.swp
+bundle.js.map
+_ide_helper.php
+.phpstorm.meta.php
+.idea/*
+knexfile.js

@@ -1,5 +1,7 @@
 # 環境変数
   export LANG=ja_JP.UTF-8
+  fpath=(~/.zsh/completion $fpath)
+
  
 # 補完機能を有効にする
   autoload -Uz compinit , compinit
@@ -45,6 +47,7 @@
  alias grep='grep --color=auto'
  alias fgrep='fgrep --color=auto'
  alias egrep='egrep --color=auto'			    
+ alias display-zoom='gsettings set org.gnome.desktop.interface text-scaling-factor'
 
 ### Heroku Toolbelt の設定
  export PATH="/usr/local/heroku/bin:$PATH"
@@ -56,6 +59,9 @@
  export PATH="$HOME/.anyenv/bin:$PATH" 
  eval "$(anyenv init -)"
 
-
+# flutter
+ export PATH="$PATH:/usr/local/flutter/bin/"
 
 # vim:set ft=zsh :
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
