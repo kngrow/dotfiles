@@ -14,7 +14,6 @@ set wrapscan
 
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-p><Enter><ESC>:NERDTree
 set whichwrap=h,l
 set pastetoggle=<F10>
 
@@ -42,7 +41,6 @@ call dein#add('Shougo/dein.vim')
  call dein#add('tomtom/tcomment_vim')
  call dein#add('thinca/vim-scouter')
  call dein#add('cohama/lexima.vim')
- call dein#add('tpope/vim-rails')
  call dein#add('scrooloose/nerdtree')
  call dein#add('airblade/vim-gitgutter')
 
