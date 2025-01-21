@@ -1,10 +1,13 @@
 # 環境変数
   export LANG=ja_JP.UTF-8
-  fpath=(~/.zsh/completion $fpath)
+#  fpath=(~/.zsh/completion $fpath)
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+  export PATH=/usr/local/bin/git:$PATH
 
  
 # 補完機能を有効にする
-  autoload -Uz compinit , compinit
+  autoload -Uz compinit && compinit
+  compinit -u
   setopt auto_pushd
   setopt pushd_ignore_dups
   HISTFILE=~/.zsh_history
@@ -35,7 +38,7 @@
  precmd () { vcs_info }
  RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
  
- PROMPT='%~ (･∞･) < '
+ PROMPT='%~ 🫠 < '
 
 #  各種alias
 #  alias ls='ls --color=auto'
@@ -47,21 +50,39 @@
  alias grep='grep --color=auto'
  alias fgrep='fgrep --color=auto'
  alias egrep='egrep --color=auto'			    
- alias display-zoom='gsettings set org.gnome.desktop.interface text-scaling-factor'
 
-### Heroku Toolbelt の設定
- export PATH="/usr/local/heroku/bin:$PATH"
  export SSL_CERT_FILE="/usr/local/etc/ssl/cacert.pem"
 
  export PATH="$HOME/.composer/vendor/bin:$PATH"
  export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 # anyenv
- export PATH="$HOME/.anyenv/bin:$PATH" 
- eval "$(anyenv init -)"
+# export PATH="$HOME/.anyenv/bin:$PATH" 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# eval "$(anyenv init -)"
 
 # flutter
  export PATH="$PATH:/usr/local/flutter/bin/"
 
+# rust
+source ~/.cargo/env
+
+
+# android adb
+ export PATH="$PATH:/Users/pinon/Library/Android/sdk/platform-tools"
+
+PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
+  export LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
+
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig"
+
+export SSL_CERT_FILE="$HOME/.config/curl/cacert.pem"
+
+# time関数をbashっぽく表示させる
+TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'
+
+
 # vim:set ft=zsh :
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
